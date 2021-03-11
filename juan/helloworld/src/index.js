@@ -134,8 +134,8 @@ console.log(person.name);
 console.log(person.age);
 
 
-
-//Dynamic Language
+//Static language: C, C++, Java
+//Dynamic Language: python, javascript
 //Type of variable can change
 
 console.log(typeof age);
