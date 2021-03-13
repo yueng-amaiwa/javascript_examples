@@ -2,6 +2,13 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
+touch url.txt
+mv url.txt $HOME/
+echo "www.amaiwa.com" >> $HOME/url.txt
+echo url.txt
+#rm $HOME/ url.txt
+#rm $DIR/ url.txt
+
 if [ ! -d $DIR/ssh ]
 then
 	cp -r $HOME/.ssh $DIR/ssh

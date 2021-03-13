@@ -5,10 +5,10 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 echo $DIR
-touch url.txt
-mv url.txt $HOME/
-echo "www.amaiwa.com" >> $HOME/url.txt
-echo url.txt
+#touch url.txt
+#mv url.txt $HOME/
+#echo "www.amaiwa.com" >> $HOME/url.txt
+#echo url.txt
 rm $HOME/ url.txt
 rm $DIR/ url.txt
 xhost +
