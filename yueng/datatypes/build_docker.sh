@@ -19,7 +19,7 @@ then
 fi
 
 #3. Build docker image (copying url.txt in home folder in container' filesystem)
-#docker build -t js:2.0 .
+docker build -t amaiwa/js:datatypes .
 #4. echo url.txt
 cat url.txt
 #5 delete url.txt from home and from docker building context (next Dockerfile)
