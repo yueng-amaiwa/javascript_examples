@@ -8,7 +8,8 @@ instructions.txt
 2. (host) rename image name to sample.jpg
 3. (host) copy image to docker building context (next to Dockerfile)
 4. build docker image (copy sample.jpg into container)
-6. (host) create following js script:
-	if sample.jpg exits print file size
+5. (host) create following js script:
+	if sample.jpg exists print file size
 	else print file does not exist
-7. (container) run script in container
+6. (container) run script in container
+
