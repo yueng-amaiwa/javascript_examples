@@ -5,6 +5,8 @@
  * Distributed under terms of the MIT license.
  */
 
+//Define 5 examples of each data_type and their definition
+
 //Primitives/Value
 // Strings
 // Numbers
@@ -12,74 +14,45 @@
 // Undefined
 // null
 
-let name = 'Juan'; //String literal
-let age = 30; //Literal
-let isApproved = true; //Boolean
-let firstName = undefined; //undefined
-let selctedColor = null; //null variable
-
-//Other data types
-//Object: most important data type
-//Symbol
-
-//Single line comments
-
-/*
- Multiline comment
- This
- is
- a 
- multiline
- comment
-*/
-
-//Create variables with var or let keyword
-
-/*
-var variableName = 'test';
-let variableName = 'test';
-cons variableName = 'test';
-*/
-
-//1. The name shoud be unique
-//2. The name should not be any reserver keyword
-//3. The name must start with a character
-
-const exampleString = 'Hello World';
-
 //////////////////////////////////
 ////////////Strings///////////////
 /////////////////////////////////
-//String Single quotes, double quotes, 
+//String Single quotes, double quotes, back ticks
+//String a sequence of characters
 
 const singleQuotes = 'Hello world';
+console.log(singleQuotes);
 const doubleQuotes = "Hello world";
+console.log(doubleQuotes);
 const backticks = `Hello!!!`;
+console.log(backticks);
 
-
-/*
 //backticks usage, to embed variables inside the string
 const name1 = 'John';
-const backticks = `Hello ${name1}`;
-
-console.log(typeof backticks)
+const helloname1 = `Hello ${name1}`;
+console.log(helloname1);
 
 //////////////////////////////////
 ////////////Numbers///////////////
 /////////////////////////////////
 
+//Number in JavaScripts can be floats, integers
 const wholeNumber = 5;
 const decimalNumber = 0.5;
+console.log(wholeNumber);
 
 const firstNumber = 5;
 const secondNumber = 10;
+console.log(firstNumber);
 
 const result = firstNumber - secondNumber;
+console.log(result);
 
 //NaN: not a number, a numeric datatype
+//Infinity: not a number, a numeric datatype
 
-//////////////////////////////////
-////////////Booleans///////////////
+/////////////////////////////////
+////////////Booleans/////////////
 /////////////////////////////////
 
 //true
@@ -96,106 +69,34 @@ if (isCool) {
 }
 
 const age = 20;
-
 console.log(age > 20);
 
-//////////////////////////////////
+///////////////////////////////
 ////////////Null///////////////
-/////////////////////////////////
+///////////////////////////////
 
-const age = null; //Empty, value unknown
-
-age = 20;
+let weight = null; //Empty, value unknown
+console.log(weight);
+weight = 20;
+let height = null;
+console.log(height);
+height = 180;
+var bmi = null;
+console.log(bmi);
+bmi = 50;
 
 //////////////////////////////////
-////////////Null///////////////
+////////////Undefined///////////////
 /////////////////////////////////
 
 let x; //usually not assign = undefined
 console.log(typeof x);
+let a, b, c, d, e, f;
+console.log(typeof a);
+console.log(typeof b);
+console.log(typeof c);
+console.log(typeof d);
+console.log(typeof e);
 
 //difference between null and undefined, null is assigned, undefined is not assigned
 
-//////////////////////////////////
-////////////Objects///////////////
-/////////////////////////////////
-
-//used to store collections of data
-
-const name = 'John';
-const age = 25;
-
-const person = {
-    name: 'John';
-    age: 25;
-}
-
-console.log(person);
-console.log(person.name);
-console.log(person.age);
-
-
-//Static language: C, C++, Java
-//Dynamic Language: python, javascript
-//Type of variable can change
-
-console.log(typeof age);
-document.write(age);
-
-age = 'Thirty';
-
-console.log(typeof age);
-document.write('<br>');
-document.write(age);
-
-//References Types
-//undefined is a type and a value
-//objects, arrays and functions
-
-let person = {
-    name: 'Juan',
-    age: 30
-};
-
-console.log(person);
-document.write(person);
-
-//Dot notation
-person.name = 'John';
-person.age = 40;
-
-console.log(person);
-
-//Bracket notation, you don't know the property until runtime
-person['name'] = 'Joseph';
-person['age'] = 45;
-
-console.log(person);
-
-let selection = 'name';
-person[selection] = 'Iuan';
-console.log(person);
-
-
-let selectedColors = ['red','blue'];
-selectedColors[2] = 'green';
-console.log(selectedColors);
-
-console.log(selectedColors.length);
-
-
-function greet(name) {
-    console.log('Hello World from Function' + name);
-}
-
-greet()
-greet('Juan')
-greet('Mac')
-
-function square(number) {
-    return number * number;
-}
-
-console.log(square(2));
-
-*/
