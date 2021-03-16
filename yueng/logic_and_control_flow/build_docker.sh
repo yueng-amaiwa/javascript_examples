@@ -21,3 +21,5 @@ docker build . -t amaiwa/js:flow_and_control_flow
 
 echo "Showing sample image"
 xdg-open sample.jpg
+
+rm sample.jpg

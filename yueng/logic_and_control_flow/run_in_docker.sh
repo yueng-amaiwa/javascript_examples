@@ -11,8 +11,8 @@ xhost +
 docker run --rm -it \
 	--net=host \
 	-w /src \
+	-v $DIR/src:/src \
 	-v /tmp/.X11-unix:/tmp/.X11-unix \
 	-e DISPLAY=$DISPLAY \
-	amaiwa/js:flow_and_control_flow bash
-	#amaiwa/js: l google-chrome-stable --no-sandbox index.html
+	amaiwa/js:flow_and_control_flow google-chrome-stable --no-sandbox index.html
 
