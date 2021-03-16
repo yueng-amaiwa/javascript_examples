@@ -52,8 +52,8 @@ console.log(result2);
 console.log(typeof result2);
 
 //Manuel Discovery whilw using "+" it add string to number as backticks
-const result3 = singleQuotes + wholeNumber;
-console.log(result3);
+const result3 = singleQuotes + wholeNumber +" "+ (10/3);
+console.log("Result 3", result3);
 console.log(typeof result3);
 
 //DATA TYPE BOOLEANS
@@ -145,4 +145,9 @@ console.log(j);
 //{
 //console.log(j);
 //}
+
+//Logical Operator
+//AND && ==> all operands are true ==> true
+ console.log(true && false);
+
 
