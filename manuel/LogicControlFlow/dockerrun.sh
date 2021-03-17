@@ -10,6 +10,6 @@ docker run --rm -it \
         --net=host \
 	-v /tmp/.X11-unix:/tmp/.X11-unix \
 	-v $DIR/src:/src \
-	-w /home \
+	-w /src \
         -e DISPLAY=$DISPLAY \
         chromeimagesample bash
