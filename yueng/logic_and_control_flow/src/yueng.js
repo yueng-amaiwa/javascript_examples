@@ -83,19 +83,28 @@ function loadFile(input){
 
 function recognize(){
 	let name =document.getElementById("frm3").name.value;
+
 	if (lines !=null ){
+		let found = false;
+		let fname = null;
 		for (let i=0; i < lines.length; i++){
 			line = lines[i];
+			console.log(line);
 			if (line.length < 3){
-				console.log("CONTINUE");
 				continue;
 			}
-			let comp = line.includes(name);
-			if (comp){
-				console.log(line);
+			if (line.includes(name)){
+				found = true;
+				fname = line;
+				break;
 			}
-			let rst = `${line} === ${name} (${comp}))`
-			alert(rst);
+		}
+		if (found){
+			console.log(fname);
+			alert(fname);
+		}
+		else{
+			alert(`${name} not in list`);
 		}
 	}else{
 		alert("You have not loaded a list");
