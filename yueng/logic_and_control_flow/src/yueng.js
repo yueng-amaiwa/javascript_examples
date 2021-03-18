@@ -5,6 +5,8 @@
  * Distributed under terms of the MIT license.
  */
 
+var lines = null;
+
 function readFile(input) {
 	let file = input.files[0];
 	reader = new FileReader();
@@ -50,9 +52,53 @@ function factorial(){
 
 function identify(){
 	let number =document.getElementById("frm2").number.value;
+	var array = [];
+	let n =0;
 	while (number !== 0){
-		alert(number%10);
-		console.log(number%10);
+		n = number%10;
+		array.push(n);
 		number = Math.floor(number/10);
 	}
+	let rarray = array.reverse();
+	console.log(rarray);
+	alert(rarray);
+}
+
+function loadFile(input){
+	let file = input.files[0];
+	reader = new FileReader();
+	reader.readAsText(file);
+
+	reader.onload = function() {
+		let result = reader.result;
+		lines = result.split('\n');
+		alert(`file loaded: \n${result}`);
+
+	};
+
+	reader.onerror = function() {
+		console.log(reader.error);
+	};
+}
+
+function recognize(){
+	let name =document.getElementById("frm3").name.value;
+	if (lines !=null ){
+		for (let i=0; i < lines.length; i++){
+			line = lines[i];
+			if (line.length < 3){
+				console.log("CONTINUE");
+				continue;
+			}
+			let comp = line.includes(name);
+			if (comp){
+				console.log(line);
+			}
+			let rst = `${line} === ${name} (${comp}))`
+			alert(rst);
+		}
+	}else{
+		alert("You have not loaded a list");
+	}
+
 }
