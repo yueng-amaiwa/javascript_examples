@@ -1,0 +1,15 @@
+instructions.txt
+
+:Author: yuengdelahoz
+:Email: yuengdelahoz@Yueng
+:Date: 2021-03-15 19:24
+
+1. (host) Using wget download image from the web
+2. (host) rename image name to sample.jpg
+3. (host) copy image to docker building context (next to Dockerfile)
+4. build docker image (copy sample.jpg into container)
+5. (host) create following js script:
+	if sample.jpg exists print file size
+	else print file does not exist
+6. (container) run script in container
+
