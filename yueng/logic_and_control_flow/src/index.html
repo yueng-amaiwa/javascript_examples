@@ -3,10 +3,35 @@
 	<head>
         <meta charset="utf-8" />
 		<title>Yueng De La Hoz</title>
+		<script	src ="yueng.js" ></script>
 	</head>
 	<body>
+		<p> Conditionals</p>
 		<input type="file" onchange="readFile(this)">
-		<script	src ="yueng.js" >
-		</script>
+
+		<p>Logic and Control Flow</p>
+		<p>1.</p>
+		<form id="frm1" action="/action_page.php">
+			<label for="factorial">Enter Number (Factorial):</label><br>
+			<input type="number" id="number" name="number"><br>
+			<input type="button" onclick="factorial()" value="Submit">
+		</form>
+		<p> </p>
+
+		<p>2.</p>
+		<form id="frm2" action="/action_page.php">
+			<label for="identify">Enter Number (Identify):</label><br>
+			<input type="number" id="number" name="number"><br>
+			<input type="button" onclick="identify()" value="Submit">
+		</form>
+
+		<p>3.</p>
+		<input type="file" onchange="loadFile(this)">
+		<p></p>
+		<form id="frm3" action="/action_page.php">
+			<label for="name">Enter name to recognize:</label><br>
+			<input type="text" id="name" name="name"><br>
+			<input type="button" onclick="recognize()" value="Search">
+		</form>
 	</body>
 </html>
