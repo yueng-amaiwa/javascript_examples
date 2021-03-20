@@ -6,29 +6,52 @@
 //i++;
 //}
 
-function factorial (n) {
+//const n = "id";
+function factorial (form) {
+	let n = form.ingresanumero.value;
 	var total = 1; 
 	for (i=1; i<=n; i++) {
 		total = total * i; 
 	}
-	return total; 
+	alert(total);
+	console.log(total);
+	//return total; 
 }
 
-var str = "Amaiwa tu Papa los demas no valen nah!";
-var words = str.split(" ");
-for (var i = 0; i < words.length - 1; i++) {
-    words[i] += " ";
+//var words = str.split(" ");
+
+function descifraNumero(form){
+  let o = form.ingresadescifrar.value;
+  console.log(o);
+  var words = o.split("");
+  console.log(words);
+  alert(words);
+  for (var i = 0; i < o.length; i++) {
+     //console.log(i);
+     //if(){ 
+     //console.log(words);
+     //alert(words);
+     //}
+  //words[i] += " ";
+  }
 }
-console.log(words);
 
-//lista = new Array('Juan', 'Yueng', 'Manuel');
+//string.match(regExp);
 
-//function adivinarNombre(nombre) {
+lista = new Array('Juan', 'Yueng', 'Manuel');
+console.log(lista);
+function adivinarNombre(form) {
   // Cargamos el combo
- // for (x=0;x < lista.length;x++)
-  // document.formulario.miCombo[x] = new Option(lista[x]);
-//console.log(nombre);
-//}
+  let m = form.ingresalista.value;
+  console.log(n);
+  for  (let x=0;x < lista.length;x++){
+      console.log(lista[x]);
+      if (n === lista[x]){
+      console.log(m);
+      alert(m);
+      }  
+}
+}
 
 //y = 0;
    
