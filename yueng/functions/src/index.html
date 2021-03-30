@@ -6,32 +6,25 @@
 		<script	src ="yueng.js" ></script>
 	</head>
 	<body>
-		<p> Conditionals</p>
-		<input type="file" onchange="readFile(this)">
-
-		<p>Logic and Control Flow</p>
-		<p>1.</p>
+		<p>1. Calculator</p>
 		<form id="frm1" action="/action_page.php">
-			<label for="factorial">Enter Number (Factorial):</label><br>
-			<input type="number" id="number" name="number"><br>
-			<input type="button" onclick="factorial()" value="Submit">
+			<label for="number1">Enter Number 1:</label><br>
+			<input type="number" id="number1" name="number1"><br>
+			<label for="number2">Enter Number 2:</label><br>
+			<input type="number" id="number2" name="number2"><br>
+			<input type="button" onclick="calculate('+')" value="+">
+			<input type="button" onclick="calculate('-')" value="-">
+			<input type="button" onclick="calculate('*')" value="*">
+			<input type="button" onclick="calculate('/')" value="/">
+			<input type="text" id="result" name="result"><br>
 		</form>
-		<p> </p>
-
-		<p>2.</p>
+		<p>2. Temperature Conversion</p>
 		<form id="frm2" action="/action_page.php">
-			<label for="identify">Enter Number (Identify):</label><br>
-			<input type="number" id="number" name="number"><br>
-			<input type="button" onclick="identify()" value="Submit">
-		</form>
-
-		<p>3.</p>
-		<input type="file" onchange="loadFile(this)">
-		<p></p>
-		<form id="frm3" action="/action_page.php">
-			<label for="name">Enter name to recognize:</label><br>
-			<input type="text" id="name" name="name"><br>
-			<input type="button" onclick="recognize()" value="Search">
+			<label for="number1">Enter Degrees in Celsius/Farenheit:</label><br>
+			<input type="number" id="number1" name="number1"><br>
+			<input type="button" onclick="temperatureConversion('C')" value="in celsius">
+			<input type="button" onclick="temperatureConversion('F')" value="in farenheit"><br>
+			<input type="text" id="result" name="result"><br>
 		</form>
 	</body>
 </html>

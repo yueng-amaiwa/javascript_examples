@@ -5,109 +5,39 @@
  * Distributed under terms of the MIT license.
  */
 
-var lines = null;
-
-function readFile(input) {
-	let file = input.files[0];
-	reader = new FileReader();
-	reader.readAsText(file);
-
-	reader.onload = function() {
-		var result = reader.result;
-		console.log(result.length);
-
-		if (result.length === 12){
-			alert(`1. File size: ${file.size}`);
-		}
-		else{
-			alert(`2. File size: ${file.size}`);
-		}
-	};
-
-	reader.onerror = function() {
-		console.log(reader.error);
-	};
-
-}
-
-//Create an image that allow the user to communicate with JS using a text file with a list of number, names to satisfy the following conditions using FOR and WHILE:
-//1. Create a loop on JS to execute the X Factorial for a given number.
-//User enter: 5
-//JS Result: 1 x 2 x 3 x 4 x 5 = 120
-function factorial(){
-	let number =document.getElementById("frm1").number.value;
-	let f = 1;
-	for (let i=1; i<=number; i++){
-		f = f*i
+function calculate(op){
+	let n1 =document.getElementById("frm1").number1.value;
+	let n2 =document.getElementById("frm1").number2.value;
+	let n3=null;
+	if (op === '+'){
+		n3 = parseInt(n1) + parseInt(n2);
 	}
-	alert(`Factorial of ${number} is ${f}`);
-}
-
-//2. Create a loop to identify each number from a given XYZW number and listed as:
-//JS Result:
-//a. X
-//b. Y
-//c. Z
-//d. W
-
-function identify(){
-	let number =document.getElementById("frm2").number.value;
-	var array = [];
-	let n =0;
-	while (number !== 0){
-		n = number%10;
-		array.push(n);
-		number = Math.floor(number/10);
+	else if (op === '-'){
+		n3 = parseInt(n1) - parseInt(n2);
 	}
-	let rarray = array.reverse();
-	console.log(rarray);
-	alert(rarray);
-}
-
-function loadFile(input){
-	let file = input.files[0];
-	reader = new FileReader();
-	reader.readAsText(file);
-
-	reader.onload = function() {
-		let result = reader.result;
-		lines = result.split('\n');
-		alert(`file loaded: \n${result}`);
-
-	};
-
-	reader.onerror = function() {
-		console.log(reader.error);
-	};
-}
-
-function recognize(){
-	let name =document.getElementById("frm3").name.value;
-
-	if (lines !=null ){
-		let found = false;
-		let fname = null;
-		for (let i=0; i < lines.length; i++){
-			line = lines[i];
-			console.log(line);
-			if (line.length < 3){
-				continue;
-			}
-			if (line.includes(name)){
-				found = true;
-				fname = line;
-				break;
-			}
-		}
-		if (found){
-			console.log(fname);
-			alert(fname);
-		}
-		else{
-			alert(`${name} not in list`);
-		}
-	}else{
-		alert("You have not loaded a list");
+	else if (op === '*'){
+		n3 = parseInt(n1) * parseInt(n2);
+	}
+	else{
+		n3 = parseInt(n1) / parseInt(n2);
 	}
 
+	console.log('result',n3);
+	document.getElementById('frm1').result.value = n3;
+}
+
+function temperatureConversion(op){
+	let n1 =document.getElementById("frm2").number1.value;
+	let n3=null;
+	if (op === 'F'){
+		n3 = n1*1.8 + 32
+		n3 = n3 + "°F"
+	}
+	else{
+		n3 = (n1-32)*(5/9)
+		n3 = n3 + "°C"
+	}
+
+	console.log('result',n3);
+	document.getElementById('frm2').result.value="result: " + n3;
 }
