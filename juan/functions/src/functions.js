@@ -40,4 +40,18 @@ function fToc(v1) {
     document.getElementById('temperature').textContent = `Result = ${result} \xB0C`;
 }
 
-
+function multAsum (v1,v2) {
+    let val1 = parseInt(v1);
+    let val2 = parseInt(v2);
+    let result = 0;
+    let resultString = '';
+    for (let i = 0; i < val2; i++) {
+	if (i === 0) {
+	    resultString = `${val1}`;
+	} else {
+	    resultString += ` + ${val1}`;
+	}
+	result += val1;
+    }
+    document.getElementById('resultAsum').textContent = `Result = ${resultString} = ${result}`;
+}
