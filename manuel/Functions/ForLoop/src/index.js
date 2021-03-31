@@ -1,140 +1,88 @@
-//var numero = prompt("Write a number");
-//while(numero % 3 = 0)
-//{
-//console.log("El numero es divisible entre 3");
-//without i++ Infinite Loop
-//i++;
-//}
-
-//const n = "id";
-//function factorial (form) {
-//	let n = form.ingresanumero.value;
-//	var total = 1; 
-//	for (i=1; i<=n; i++) {
-//		total = total * i; 
-//	}
-//	alert(total);
-//	console.log(total);
-	//return total; 
-//}
-
-//var words = str.split(" ");
-
-//function descifraNumero(form){
-//  let o = form.ingresadescifrar.value;
-//  console.log(o);
-//  var words = o.split("");
-//  console.log(words);
-//  alert(words);
-//  for (var i = 0; i < o.length; i++) {
-     //console.log(i);
-     //if(){ 
-     //console.log(words);
-     //alert(words);
-     //}
-  //words[i] += " ";
- // }
-//}
-
-//string.match(regExp);
-
-//lista = new Array('Juan', 'Yueng', 'Manuel');
-//console.log(lista);
-//function adivinarNombre(form) {
-  // Cargamos el combo
-  //let m = form.ingresalista.value;
- // console.log(n);
- // for  (let x=0;x < lista.length;x++){
-  //    console.log(lista[x]);
-    //  if (n === lista[x]){
-     /* console.log(m);
-      alert(m);
-      }  
-}
+function sumar() {
+let num1, num2, res;
+num1 = parseInt(document.calculadora.valor1.value);
+num2 = parseInt(document.calculadora.valor2.value);
+res = num1 + num2;
+document.calculadora.resultado.value = res;
 }
 
-//y = 0;
-   
-  // for (x=0;x < lista.length;x++) {
-    // if (expr.test(lista[x])) {
-      //document.formulario.miCombo[y] = new Option(lista[x]);
-       //y++;
-     //}
-   //}
-
-//for(initialization;condition;final expression) 
-
-//for(let j = 0; j < 10; j++)
-//{
-//console.log(j);
-//}
-
-//Infinite Loop
-//let k = 0,
-//for( ;; )
-//{
-//console.log(j);
-//}*/
-
-
-//console.log("");
-
-//numero argumentos de la funcion
-//DECLARATION
-
-//let numero = i
-//Function declaration
-//Que es declarar una variable? Asignar un valor numericos, string, booleano, Null, Undefined
-//Declarar una variable es decirle al PC guardame en memoria la localizacion de una variable. Reservar un espacio en memoria,
-//Asignar es darle un valor
-//Declaracion de una funcion
-/*let x = 5;
-function square(numero){
-console.log("Dentro de la funcion let x es:",x);
-let x = 6;
-console.log("Dentro de la funcion x es:",x);
-x = 9;
-return  numero * numero;
-}
-console.log("Fuera de la funcion x es:",x);
-//console.log(z);
-console.log(square(3));
-console.log("Despues del square de la funcion x es:",x);
-//console.log(numero);
-//const resultado = square();
-//console.log(resultado);*/
-
-//A function declaration
-function square(numero){
-return numero * numero;
-}
-const result = square (5);
-
-// function expression
-const nombre = function(argumento1, argumento2){
-//console.log('Hello World');
-return argumento1 + argumento2; 
+function restar() {
+let num1, num2, res;
+num1 = parseInt(document.calculadora.valor1.value);
+num2 = parseInt(document.calculadora.valor2.value);
+res = num1 - num2;
+document.calculadora.resultado.value = res;
 }
 
-//Arrow
-const texto = (argumento3, argumento4) => {
-//statements
-return argumento3 * argumento4;
+function multiplicar() {
+let num1, num2, res;
+num1 = parseInt(document.calculadora.valor1.value);
+num2 = parseInt(document.calculadora.valor2.value);
+res = num1 * num2;
+document.calculadora.resultado.value = res;
 }
 
-function saluda(nombre1) {
-console.log(`Hola , ${nombre1}!!!`);
+function dividir() {
+let num1, num2, res;
+num1 = parseInt(document.calculadora.valor1.value);
+num2 = parseInt(document.calculadora.valor2.value);
+res = num1 / num2;
+document.calculadora.resultado.value = res;
 }
 
-function sumar(x,y) {
-return "ES UNA SUMA";
-return x + y;
+//------TERMOSTATO-----------------------------------
+
+function EntraData() {
+let txt = document.getElementById("tempEntrada");
+let temp = parseInt(txt.value);
+return temp;
 }
 
-const adicion = sumar (3,5);
-console.log(adicion);
+function EscriuData(nomZona, text) {
+document.getElementById(nomZona).innerHTML = text;
+}
 
+function toFahrenheit() {
+let temp = EntraData();
+temp = ((1.8) * temp + 32);
+EscriuData('Zona1', temp + " oF");
+FraseRelativa(temp);
+}
 
+// por pantalla la temp resultado
+function toCelsius() {
+let temp = EntraData();
+let temp2 = ((temp - 32) / 1.8);
+EscriuData('Zona1', temp2 + " oC");
+FraseRelativa(temp);
+}
+
+function FraseRelativa(temperatura) {
+let cadena="-";
+if ((temperatura >= 14) && (temperatura < 32)) cadena ="Low Temperature";
+if ((temperatura >= 32) && (temperatura < 70)) cadena ="Nice Temperature";
+if ((temperatura >= 68) && (temperatura <= 100)) cadena ="High Temperature";
+if (cadena=="-") cadena = "Unknown Temperature";
+EscriuData('Zona2', cadena);
+};
+
+//--------FUNCTION MULTIPLICATION BASED ON ADDITION------------
+function multsuma() {
+let num1, num2, res, i;
+num1 = parseInt(document.multsumadora.valor3.value);
+num2 = parseInt(document.multsumadora.valor4.value);
+res = num1;
+if(num2 != 0){
+for (i = 1 ; i < num2 ; i++){
+res = res + num1;
+console.log(num1);
+}
+}else {
+res = num2;
+console.log("No hay nada que sumar por cero");
+}
+document.multsumadora.resultado1.value = res;
+}
 
 
 

@@ -12,4 +12,4 @@ docker run --rm -it \
 	-v $DIR/src:/src \
 	-w /src \
         -e DISPLAY=$DISPLAY \
-        chromedatatype bash
+        manueldockeropera bash
