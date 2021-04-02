@@ -22,9 +22,19 @@
 		<form id="frm2" action="/action_page.php">
 			<label for="number1">Enter Degrees in Celsius/Farenheit:</label><br>
 			<input type="number" id="number1" name="number1"><br>
-			<input type="button" onclick="temperatureConversion('C')" value="in celsius">
-			<input type="button" onclick="temperatureConversion('F')" value="in farenheit"><br>
-			<input type="text" id="result" name="result"><br>
+			<input type="button" onclick="temperatureConversion('C')" value="F -> C">
+			<input type="button" onclick="temperatureConversion('F')" value="C -> F"><br>
+			<output name="result" id="result"></output>
+		</form>
+
+		<p>3. Calculator 2</p>
+		<form id="frm3" action="/action_page.php">
+			<label for="number1">Enter Number 1:</label><br>
+			<input type="number" id="number1" name="number1"><br>
+			<label for="number2">Enter Number 2:</label><br>
+			<input type="number" id="number2" name="number2"><br>
+			<input type="button" onclick="multiplication()" value="*">
+			<output name="result" id="result"></output>
 		</form>
 	</body>
 </html>

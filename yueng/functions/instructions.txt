@@ -9,6 +9,7 @@ b) Also a function that display:
 -If the temperature is between 70 and 100 displays “ High Temperature”
 -If the temperature is not in between any of the above ones displays “ Unknown Temperature”
 c) Create a function that given the temperature in Fahrenheit it turns into Celsius.
+
 4. Bonus Exercise (Include Coke and Bread)
 Create a function that simulate a multiplication but using addition only.
 Example:
