@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+
+<form name='form1' action="">
+    <label>Calculator</label><br>
+    <input type="text" name="val1" value="">
+    <input type="text" name="val2" value="">
+    <input type="button" name="add" value="+" onclick="addFunc(this.form.val1.value,this.form.val2.value)">
+    <input type="button" name="subtract" value="-" onclick="minusFunc(this.form.val1.value,this.form.val2.value)">
+    <input type="button" name="multiply" value="x" onclick="timesFunc(this.form.val1.value,this.form.val2.value)">
+    <input type="button" name="divide" value="/" onclick="divideFunc(this.form.val1.value,this.form.val2.value)">
+    <br>
+    <label id="result" value=""></label> 
+</form> 
+
+<form name='form2' action="">
+    <label>Temperature Converter</label><br>
+    <input type="text" name="val1" value="">
+    <input type="button" name="ctof" value="C to F" onclick="cTof(this.form.val1.value)">
+    <input type="button" name="ftoc" value="F to C" onclick="fToc(this.form.val1.value)">
+    <br>
+    <label id="temperature" value=""></label> 
+</form> 
+
+<form name='form3' action="">
+    <label>Calculator</label><br>
+    <input type="text" name="val1" value="">
+    <input type="text" name="val2" value="">
+    <input type="button" name="multiply" value="x" onclick="multAsum(this.form.val1.value,this.form.val2.value)">
+    <br>
+    <label id="resultAsum" value=""></label> 
+</form> 
+
+
+
+
+<script src="functions.js"></script>
+
+
+</body>
+
+</html>
+

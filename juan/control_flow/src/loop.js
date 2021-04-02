@@ -5,8 +5,9 @@
  * Distributed under terms of the MIT license.
  */
 
-function factFunc(form) {
-    let x = form.inputbox.value;
+function factFunc(x) {
+    //let form = input.form;
+    //let x = form.inputbox.value;
     let result = 1;
     if (x >= 0) {
 	for (let i = 1; i <= x; i++) {

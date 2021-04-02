@@ -15,7 +15,7 @@ cp $HOME/url.txt $DIR
 
 #3. Build docker image (copying url.txt in container' filesystem)
 
-docker build -f Dockerfile -t chromedatatype .
+docker build --rm -t manueldockeropera .
 
 #4. echo url.txt
 echo url.txt

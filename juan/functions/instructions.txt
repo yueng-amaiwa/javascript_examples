@@ -1,0 +1,21 @@
+instructions.txt
+
+:Author: juanwilches
+:Email: juanwilches@VPN-157-26.vpn.usf.edu
+:Date: 2021-03-29 19:19
+
+Function Exercise
+1. Create an image with Fedora that allow vim, opera browser and run html with js.
+2. Create a program in HTML that simulates a “Calculator” with basic math operations ADDITION SUBTRACTION MULTIPLICATION DIVISION
+3.  Create a HTML program that:
+a) Given a Temperature in Celsius it convert it in Fahrenheit using function.
+b) Also a function that display:
+-If the temperature is between 10 and 32 displays “ Low Temperature”
+-If the temperature is between 33 and 70 displays “ Nice Temperature”
+-If the temperature is between 70 and 100 displays “ High Temperature”
+-If the temperature is not in between any of the above ones displays “ Unknown Temperature”
+c) Create a function that given the temperature in Fahrenheit it turns into Celsius.
+4. Bonus Exercise (Include Coke and Bread)
+Create a function that simulate a multiplication but using addition only.
+Example:
+If 3 x 4 is 12. Function should not have return 3 * 4; instead it should create a dynamic For Loop that return 3 + 3 + 3 + 3 or return 4 + 4 +4; user can enter any value in HTML and the result should display 3 x 4 is the addition of 3 + 3 + 3 + 3 or 4 + 4 + 4.

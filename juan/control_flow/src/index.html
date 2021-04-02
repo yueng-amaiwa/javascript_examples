@@ -8,10 +8,10 @@
 <input type="file" onchange="readImage(this)">
 
 <form name='form1' action="">
-<input type="text" name="inputbox" value="">
-<input type="button" name="factorial" value="Factorial" onclick="factFunc(this.form)">
-<input type="button" name="digits" value="Digits" onclick="digitFunc(this.form)">
-<input type="button" name="list" value="List" onclick="listFunc(this.form)">
+    <input type="text" name="inputbox" value="">
+    <input type="button" name="factorial" value="Factorial" onclick="factFunc(this.form.inputbox.value)">
+    <input type="button" name="digits" value="Digits" onclick="digitFunc(this.form)">
+    <input type="button" name="list" value="List" onclick="listFunc(this.form)">
 </form> 
 
 <script src="index.js">
