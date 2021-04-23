@@ -72,16 +72,19 @@ let num1, num2, res, i;
 num1 = parseInt(document.multsumadora.valor3.value);
 num2 = parseInt(document.multsumadora.valor4.value);
 res = num1;
+var texto=num1.toString();
 if(num2 != 0){
 for (i = 1 ; i < num2 ; i++){
 res = res + num1;
 console.log(num1);
+texto = texto +"+" + num1.toString();
 }
+console.log(texto);
 }else {
 res = num2;
 console.log("No hay nada que sumar por cero");
 }
-document.multsumadora.resultado1.value = res;
+document.multsumadora.resultado1.value = res + " que es " + texto;
 }
 
 
