@@ -9,15 +9,15 @@ import React, { Component } from 'react'
 
 class Counter extends Component {
     //state = {
-	//value: this.props.counter.value,
-	//tags:["tag1","tag2","tag3"] //[]
+    //value: this.props.counter.value,
+    //tags:["tag1","tag2","tag3"] //[]
     //};
 
     //styles = {
-	//fontSize: '30px',
-	//fontWeight: 'bold',
+    //fontSize: '30px',
+    //fontWeight: 'bold',
     //}
-    
+
     renderTags() {
 	if (this.state.tags.length === 0) return <p>There are no tags!</p>;
 
@@ -25,18 +25,18 @@ class Counter extends Component {
 	    {this.state.tags.map(tag => <li key={tag}>{ tag }</li>)}
 	</ul>
     }
-    
+
     //Old way to propagate this
     //constructor() {
-	//super();
-	//this.handleIncrement = this.handleIncrement.bind(this);
+    //super();
+    //this.handleIncrement = this.handleIncrement.bind(this);
     //}
-    
+
     //Pass in parameters
     //doHandleIncrement = () => {
-	//this.handleIncrement({ id: 1});
+    //this.handleIncrement({ id: 1});
     //}
-    
+
     //New way to have access to this
     handleIncrement = (product) => {
 	console.log(product);
@@ -44,38 +44,38 @@ class Counter extends Component {
     }
 
     render() {
-    
-    return  (
-	<div>
-	    <span 
-	    className={this.getBadgeClasses()}>
-		{this.formatCount()}
-	    </span>
-	    <button 
-	    //onClick={ () => this.handleIncrement({ id: 1 })} 
-	    onClick={ () => this.props.onIncrement(this.props.counter)} 
-	    className="btn btn-secondary btn-sm">+</button>
-	    <button 
-	    onClick={ () => this.props.onDecrement(this.props.counter)} 
-	    className="btn btn-secondary btn-sm m-2">-</button>
-	    <button 
-	    onClick={() => this.props.onDelete(this.props.counter.id)} 
-	    className="btn btn-danger btn-sm m-2">Delete
-	    </button>
 
-       </div>
-//	{this.state.tags.length === 0 && 'Please create a new tag!'}
-//	{this.renderTags()}
-   );
-  }
+	return	(
+	    <div>
+		<span 
+		    className={this.getBadgeClasses()}>
+		    {this.formatCount()}
+		</span>
+		<button 
+		    //onClick={ () => this.handleIncrement({ id: 1 })} 
+		    onClick={ () => this.props.onIncrement(this.props.counter)} 
+		    className="btn btn-secondary btn-sm">+</button>
+		<button 
+		    onClick={ () => this.props.onDecrement(this.props.counter)} 
+		    className="btn btn-secondary btn-sm m-2">-</button>
+		<button 
+		    onClick={() => this.props.onDelete(this.props.counter.id)} 
+		    className="btn btn-danger btn-sm m-2">Delete
+		</button>
+
+	    </div>
+	    //	{this.state.tags.length === 0 && 'Please create a new tag!'}
+	    //	{this.renderTags()}
+	);
+    }
     getBadgeClasses() {
 	let classes = "badge m-2 badge-";
 	classes += (this.props.counter.value === 0) ? "warning" : "primary";
 	return classes
     }
     formatCount() {
-    const { value } = this.props.counter;
-    return value === 0 ? 'Zero' : value;
+	const { value } = this.props.counter;
+	return value === 0 ? 'Zero' : value;
     }
 
 }
